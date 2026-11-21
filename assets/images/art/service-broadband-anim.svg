@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-hidden="true" focusable="false">
+  <rect width="400" height="400" rx="32" fill="#FFF7F7"/>
+  <g fill="none" stroke="#4D4747" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".65">
+    <rect x="168" y="76" width="64" height="248" rx="32" fill="#FFFFFF" stroke="#4D4747" stroke-width="2"/>
+    <path d="M56 126h112M56 176h112M56 226h112M56 276h112"/>
+    <path d="M232 126h112M232 176h112M232 226h112M232 276h112"/>
+  </g>
+  <g fill="none" stroke="#D82424" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 176h112M232 226h112"/>
+    <circle cx="200" cy="176" r="7" fill="#D82424"/>
+    <circle cx="200" cy="226" r="7" fill="#D82424"/>
+  </g>
+  <g fill="#D82424">
+    <circle r="5"><animateMotion path="M56 176h112" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle r="5"><animateMotion path="M344 226h-112" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></circle>
+  </g>
+  <g fill="none" stroke="#D82424" stroke-width="2">
+    <circle cx="200" cy="176" r="7"><animate attributeName="r" values="7;34" dur="2.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="200" cy="226" r="7"><animate attributeName="r" values="7;34" dur="2.2s" begin="1.1s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

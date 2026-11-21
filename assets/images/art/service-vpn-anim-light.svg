@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-hidden="true" focusable="false">
+  <rect width="400" height="400" rx="32" fill="#D82424"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".65">
+    <rect x="62" y="96" width="276" height="208" rx="64" fill="#D82424" stroke="#FFFFFF" stroke-width="2"/>
+    <rect x="170" y="212" width="60" height="48" rx="12" fill="#D82424" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M184 212v-18a16 16 0 0 1 32 0v18"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 266v-56a82 82 0 0 1 164 0v56"/>
+    <circle cx="200" cy="236" r="6" fill="#FFFFFF"/>
+  </g>
+  <circle r="6" fill="#FFFFFF"><animateMotion path="M118 266v-56a82 82 0 0 1 164 0v56" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="200" cy="236" r="6" fill="none" stroke="#FFFFFF" stroke-width="2">
+    <animate attributeName="r" values="6;15" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".9;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

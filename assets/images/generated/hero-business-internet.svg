@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-label="Business professionals collaborating online">
+  <rect width="1200" height="960" fill="#FFF7F7"/>
+  <circle cx="150" cy="160" r="190" fill="#FDECEC"/>
+  <path d="M0 742h1200" stroke="#4D4747" stroke-opacity=".18" stroke-width="3"/>
+  <g fill="none" stroke="#4D4747" stroke-opacity=".35" stroke-width="3" stroke-linecap="round">
+    <path d="M160 300h250M160 350h180M160 400h220"/>
+    <rect x="476" y="116" width="248" height="168" rx="26" fill="#FFFFFF"/>
+    <circle cx="546" cy="186" r="30"/>
+    <path d="M504 258c6-30 20-44 42-44s36 14 42 44"/>
+    <path d="M620 174h72M620 206h54M620 238h66"/>
+  </g>
+  <g fill="#D82424" fill-opacity=".65">
+    <circle cx="160" cy="300" r="7"/><circle cx="218" cy="350" r="7"/><circle cx="380" cy="400" r="7"/>
+  </g>
+  <path d="M252 666c-30-40-24-88 10-116 34 28 42 76 12 116" fill="#FDECEC" stroke="#4D4747" stroke-opacity=".3" stroke-width="3"/>
+  <g stroke="#4D4747" stroke-opacity=".5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="220" y="654" width="760" height="24" rx="12" fill="#4D4747" fill-opacity=".85" stroke="none"/>
+    <path d="M280 678v76M920 678v76"/>
+    <rect x="344" y="536" width="220" height="118" rx="12" fill="#FFFFFF"/>
+    <path d="M322 654h264l20 20H302l20-20Z" fill="#FFFFFF"/>
+    <path d="M372 580h144M372 606h96"/>
+    <rect x="742" y="552" width="160" height="102" rx="14" fill="#FFFFFF"/>
+    <path d="M762 582h120M762 610h84"/>
+  </g>
+  <g stroke="#4D4747" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="382" cy="458" r="44" fill="#FFFFFF"/>
+    <path d="M324 654c0-84 24-132 58-132s58 48 58 132" fill="#FFFFFF"/>
+    <path d="M430 558c30 12 56 34 76 62" fill="none"/>
+    <circle cx="618" cy="432" r="44" fill="#FFFFFF"/>
+    <path d="M560 654c0-84 24-134 58-134s58 50 58 134" fill="#FFFFFF"/>
+    <path d="M568 556c-26 12-48 32-64 58" fill="none"/>
+    <circle cx="846" cy="470" r="44" fill="#FFFFFF"/>
+    <path d="M788 654c0-82 24-128 58-128s58 46 58 128" fill="#FFFFFF"/>
+    <path d="M798 560c-24 14-42 34-54 58" fill="none"/>
+  </g>
+  <g fill="none" stroke="#D82424" stroke-width="6" stroke-linecap="round">
+    <path d="M370 514c8 16 20 26 34 30"/>
+    <path d="M606 488c8 16 20 26 34 30"/>
+    <path d="M834 526c-8 16-20 26-34 30"/>
+  </g>
+  <g fill="#D82424">
+    <circle cx="454" cy="580" r="9"/><circle cx="680" cy="558" r="9"/><circle cx="822" cy="600" r="9"/>
+  </g>
+  <g fill="none" stroke="#D82424" stroke-opacity=".35" stroke-width="3" stroke-linecap="round">
+    <path d="M548 186 620 174M548 186l72 52M548 186l72-24"/>
+  </g>
+</svg>

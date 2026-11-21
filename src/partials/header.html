@@ -1,0 +1,87 @@
+<header class="site-header" id="siteHeader" data-active="{{ACTIVE}}">
+	<div class="container header-inner">
+		<a class="brand" href="index.php" aria-label="M-Tel Networks — Home">
+			<span class="brand-mark"><img src="assets/images/logo-with-tagline.png" alt="M-Tel Networks" width="2172" height="724"></span>
+		</a>
+
+		<nav class="desktop-nav" aria-label="Primary navigation">
+			<ul class="nav-list">
+				<li><a class="nav-link" href="index.php" data-nav="home">Home</a></li>
+				<li><a class="nav-link" href="about-us.php" data-nav="about">About Us</a></li>
+				<li class="nav-item-drop">
+					<button class="nav-link drop-trigger" type="button" aria-expanded="false" aria-controls="servicesDropdown">
+						Services
+						<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+					</button>
+					<div class="dropdown" id="servicesDropdown">
+						<div class="dropdown-grid">
+							<a href="services.php#fibernet">Fibernet</a>
+							<a href="services.php#broadband">Broadbands</a>
+							<a href="services.php#leased">Leased Line</a>
+							<a href="services.php#wireless">Wireless</a>
+							<a href="services.php#vpn">Intranet / VPN</a>
+							<a href="services.php#lan">Lan / Wan Networks</a>
+							<a href="index.php#coverage">Coverage Area</a>
+							<a href="index.php#speedtest">Speed Test</a>
+						</div>
+					</div>
+				</li>
+				<li><a class="nav-link" href="contact-us.php" data-nav="contact">Contact Us</a></li>
+				<li><a class="nav-link" href="clients-list.php" data-nav="clients">Clients</a></li>
+			</ul>
+		</nav>
+
+		<div class="header-actions">
+			<button class="icon-button" type="button" data-open="search" aria-label="Search">
+				<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.3"/><path d="m12.8 12.8 4 4"/></svg>
+			</button>
+			<a class="btn btn-primary btn-small hide-md" href="contact-us.php">Request A Quote
+				<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
+			</a>
+			<button class="btn btn-outline btn-small hide-lg" type="button" data-open="login">Customer Login</button>
+			<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</div>
+
+	<div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+		<div class="mobile-panel-head">
+			<span class="mobile-panel-title">Menu</span>
+			<button class="icon-button" id="mobileClose" type="button" aria-label="Close menu">
+				<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+			</button>
+		</div>
+		<nav aria-label="Mobile navigation">
+			<ul class="mobile-nav">
+				<li><a href="index.php">Home</a></li>
+				<li><a href="about-us.php">About Us</a></li>
+				<li class="mobile-drop">
+					<button type="button" class="mobile-drop-trigger" aria-expanded="false" aria-controls="mobileServices">
+						Services
+						<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+					</button>
+					<div class="mobile-drop-panel" id="mobileServices">
+						<a href="services.php#fibernet">Fibernet</a>
+						<a href="services.php#broadband">Broadbands</a>
+						<a href="services.php#leased">Leased Line</a>
+						<a href="services.php#wireless">Wireless</a>
+						<a href="services.php#vpn">Intranet / VPN</a>
+						<a href="services.php#lan">Lan / Wan Networks</a>
+						<a href="index.php#coverage">Coverage Area</a>
+						<a href="index.php#speedtest">Speed Test</a>
+					</div>
+				</li>
+				<li><a href="contact-us.php">Contact Us</a></li>
+				<li><a href="clients-list.php">Clients</a></li>
+			</ul>
+		</nav>
+		<div class="mobile-panel-foot">
+			<a class="btn btn-primary" href="contact-us.php">Request A Quote
+				<svg class="arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
+			</a>
+			<button class="btn btn-outline" type="button" data-open="login">Customer Login</button>
+		</div>
+	</div>
+	<div class="menu-scrim" id="menuScrim" hidden></div>
+</header>

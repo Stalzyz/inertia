@@ -1,0 +1,69 @@
+<main id="main">
+	<section class="page-banner page-banner--image page-banner--contact" aria-labelledby="pageTitle">
+		<div class="container">
+			<nav class="breadcrumb" aria-label="Breadcrumb">
+				<a href="index.php">Home</a>
+				<span aria-hidden="true">/</span>
+				<span aria-current="page">Contact Us</span>
+			</nav>
+			<h1 id="pageTitle"><span class="headline-line">Contact</span> <span class="headline-serif"><em>Us</em></span></h1>
+		</div>
+	</section>
+
+	<section class="section" aria-labelledby="contactHeading">
+		<div class="container contact-grid">
+			<div class="contact-info reveal">
+				<h2 id="contactHeading" class="section-title"><span class="headline-line">Kindly Contact</span> <span class="headline-serif"><em>Us</em></span></h2>
+				{{CONTACT_DETAILS}}
+				<div class="contact-map reveal">
+					<iframe title="Locations — Coimbatore, Tamil Nadu" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250646.96827152415!2d76.82714837490758!3d11.01167749112608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859af2f971cb5%3A0x2fc1c81e183ed282!2sCoimbatore%2C+Tamil+Nadu!5e0!3m2!1sen!2sin!4v1566535773079!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="contact-form-card reveal">
+				<p class="eyebrow">Don't Hesitate Any More</p>
+				<h2 class="section-title">Get In Touch With Us</h2>
+				<div class="inquiry-banner" id="inquiryBanner" hidden>
+					<span class="inquiry-badge">Inquiry Details:</span>
+					<strong class="inquiry-label" id="inquiryLabel"></strong>
+				</div>
+				<form class="form-stack contact-form" method="post" id="contactForm">
+					<div class="form-row">
+						<div class="field">
+							<label for="name">Full Name <span class="required">*</span></label>
+							<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Your Name" required>
+						</div>
+						<div class="field">
+							<label for="email">Email address<span class="required">*</span></label>
+							<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Your E-mail" required>
+						</div>
+					</div>
+					<div class="field">
+						<label for="mobile">Phone No<span class="required">*</span></label>
+						<input type="tel" aria-required="true" size="30" value="" name="mobile" id="mobile" class="form-control" placeholder="Phone No" autocomplete="tel" required>
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Your Message" required></textarea>
+					</div>
+					<div class="captcha-row">
+						<div class="field">
+							<label for="letters_code">Captcha Code</label>
+							<input type="text" name="letters_code" id="letters_code" class="form-control" placeholder="Enter the Captcha Code" required>
+						</div>
+						<div class="captcha-image">
+							<img src="captcha_code_file.php?rand=1" id="captchaimg" alt="Captcha Code" width="120" height="47">
+						</div>
+						<a class="captcha-refresh" href="javascript:refreshCaptcha();" aria-label="Refresh captcha">
+							<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 7V3m0 4h-4M4 13v4m0-4h4"/><path d="M5.5 7A6 6 0 0 1 16 7M14.5 13A6 6 0 0 1 4 13"/></svg>
+						</a>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary" name="submit">send us</button>
+					</div>
+					<p class="form-status" data-status role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</div>
+	</section>
+</main>

@@ -1,0 +1,129 @@
+<!-- Customer Login & Quick Recharge -->
+<div class="modal" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="loginTitle" hidden>
+	<div class="modal-scrim" data-close></div>
+	<div class="modal-card modal-card--compact">
+		<button class="modal-close" type="button" data-close aria-label="Close">
+			<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+		</button>
+		
+		<div class="modal-tab-bar" role="tablist">
+			<button class="modal-tab-btn is-active" type="button" role="tab" id="tabLogin" aria-controls="panelLogin" aria-selected="true" data-portal-tab="login">Customer Login</button>
+			<button class="modal-tab-btn" type="button" role="tab" id="tabRecharge" aria-controls="panelRecharge" aria-selected="false" data-portal-tab="recharge">Quick Recharge / Validity</button>
+		</div>
+
+		<!-- Panel 1: Customer Login -->
+		<div class="modal-tab-panel is-active" id="panelLogin" role="tabpanel" aria-labelledby="tabLogin">
+			<h2 class="modal-title" id="loginTitle">Subscriber Portal Login</h2>
+			<form class="form-stack" id="loginForm" action="customer-login.php" method="post" enctype="multipart/form-data">
+				<div class="field">
+					<label for="Username">Username / User ID:</label>
+					<input type="text" class="form-control" id="Username" name="username" placeholder="Enter Username" autocomplete="off" required>
+				</div>
+				<div class="field">
+					<label for="pwd">Password:</label>
+					<input type="password" class="form-control" id="pwd" name="password" placeholder="Enter password" autocomplete="off" required>
+				</div>
+				<label class="checkbox"><input type="checkbox" name="remember" value="remember"> Remember me</label>
+				<div class="form-actions">
+					<button type="submit" name="Customer_log" value="Customer_log" class="btn btn-primary">Sign In</button>
+					<button type="button" class="btn btn-quiet" data-close>Close</button>
+				</div>
+				<p class="form-status" data-status role="status" aria-live="polite"></p>
+			</form>
+			<button class="text-link modal-switch" type="button" data-open="register">Sign Up / New Connection</button>
+		</div>
+
+		<!-- Panel 2: Quick Recharge & Validity Check -->
+		<div class="modal-tab-panel" id="panelRecharge" role="tabpanel" aria-labelledby="tabRecharge" hidden>
+			<h2 class="modal-title">Check Validity &amp; Instant Recharge</h2>
+			<form class="form-stack" id="rechargeForm" onsubmit="return false;">
+				<div class="field">
+					<label for="rechargeAccount">Account ID or Registered Phone No:</label>
+					<input type="text" class="form-control" id="rechargeAccount" placeholder="e.g. MTEL-8041 or 9876543210" required>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary" id="rechargeLookupBtn">Check Account Status</button>
+				</div>
+			</form>
+
+			<div class="account-status-card" id="accountStatusCard" hidden>
+				<div class="acc-row">
+					<span class="acc-label">Account Name:</span>
+					<strong class="acc-val" id="accName">M-Tel Subscriber</strong>
+				</div>
+				<div class="acc-row">
+					<span class="acc-label">Active Plan:</span>
+					<strong class="acc-val" id="accPlan">Silver 250 Mbps FTTH</strong>
+				</div>
+				<div class="acc-row">
+					<span class="acc-label">Connection Status:</span>
+					<span class="badge-status-active" id="accStatus">Active</span>
+				</div>
+				<div class="acc-row">
+					<span class="acc-label">Plan Expiry:</span>
+					<strong class="acc-val" id="accExpiry">30 Days Remaining</strong>
+				</div>
+				<div class="acc-actions">
+					<a href="contact-us.php" class="btn btn-primary btn-small" id="accPayBtn">Proceed to Instant Recharge</a>
+				</div>
+			</div>
+			<p class="form-status" id="rechargeStatus" role="status" aria-live="polite"></p>
+		</div>
+	</div>
+</div>
+
+<!-- Sign Up / Sign In (original form action preserved) -->
+<div class="modal" id="registerModal" role="dialog" aria-modal="true" aria-labelledby="registerTitle" hidden>
+	<div class="modal-scrim" data-close></div>
+	<div class="modal-card modal-card--wide">
+		<button class="modal-close" type="button" data-close aria-label="Close">
+			<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+		</button>
+		<div class="modal-split">
+			<div class="modal-form-side">
+				<h2 class="modal-title" id="registerTitle"><span class="accent">Sign Up</span> / Sign In</h2>
+				<form class="form-stack" id="registerForm" action="sign-up.php" method="post">
+					<div class="field">
+						<label for="signupname">Full Name <span class="required">*</span></label>
+						<input type="text" aria-required="true" size="30" value="" name="name" id="signupname" class="form-control" placeholder="Full Name" required>
+					</div>
+					<div class="field">
+						<label for="signuppassword">Password<span class="required">*</span></label>
+						<input type="password" aria-required="true" size="30" value="" name="password" id="signuppassword" class="form-control" placeholder="Password" required>
+					</div>
+					<div class="field">
+						<label for="signupemail">Email<span class="required">*</span></label>
+						<input type="email" aria-required="true" size="30" value="" name="email" id="signupemail" class="form-control" placeholder="Email" required>
+					</div>
+					<label class="checkbox"><input type="checkbox" id="signupcheckbox" required> I agree with all the text in the <a href="terms-conditions.php">agreement</a></label>
+					<div class="form-actions">
+						<button type="submit" id="contact_signupform_submit" name="contact_submit" class="btn btn-primary">Email Us</button>
+					</div>
+					<p class="form-status" data-status role="status" aria-live="polite"></p>
+				</form>
+				<button class="text-link" type="button" data-open="login">I am already Member</button>
+			</div>
+			<div class="modal-image-side">
+				<img src="assets/images/art/modal-pattern.svg" alt="" loading="lazy">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Search -->
+<div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+	<div class="modal-scrim" data-close></div>
+	<div class="modal-card modal-card--compact">
+		<button class="modal-close" type="button" data-close aria-label="Close">
+			<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+		</button>
+		<h2 class="modal-title" id="searchTitle">Search</h2>
+		<form class="searchform" id="searchForm" action="index.php" method="get">
+			<div class="search-row">
+				<input type="text" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input" autocomplete="off">
+				<button type="submit" class="btn btn-primary">Search</button>
+			</div>
+		</form>
+		<div class="search-results" id="searchResults" aria-live="polite"></div>
+	</div>
+</div>

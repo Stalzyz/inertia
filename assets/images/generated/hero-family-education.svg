@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-label="A family studying together at an education institute">
+  <rect width="1200" height="960" fill="#FFF7F7"/>
+  <circle cx="1040" cy="150" r="210" fill="#FDECEC"/>
+  <path d="M0 742h1200" stroke="#4D4747" stroke-opacity=".18" stroke-width="3"/>
+  <g fill="none" stroke="#4D4747" stroke-opacity=".42" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="118" y="128" width="404" height="268" rx="26" fill="#FFFFFF"/>
+    <path d="M190 330h260M190 286h180M190 242h220"/>
+    <path d="M322 396v-38"/>
+  </g>
+  <g fill="#4D4747" fill-opacity=".55">
+    <circle cx="190" cy="242" r="8"/><circle cx="242" cy="286" r="8"/><circle cx="300" cy="330" r="8"/><circle cx="368" cy="242" r="8"/><circle cx="420" cy="330" r="8"/>
+  </g>
+  <path d="M930 690c-34-56-22-116 26-152 44 38 58 98 24 152" fill="#FDECEC" stroke="#4D4747" stroke-opacity=".3" stroke-width="3"/>
+  <path d="M956 690v-98" stroke="#4D4747" stroke-opacity=".4" stroke-width="3"/>
+  <g stroke="#4D4747" stroke-opacity=".5" stroke-width="3" stroke-linecap="round">
+    <rect x="190" y="654" width="820" height="24" rx="12" fill="#4D4747" fill-opacity=".85" stroke="none"/>
+    <path d="M250 678v76M950 678v76"/>
+    <rect x="300" y="608" width="150" height="46" rx="8" fill="#FFFFFF"/>
+    <path d="M300 622h150M350 608v46"/>
+    <rect x="516" y="522" width="224" height="132" rx="12" fill="#FFFFFF"/>
+    <path d="M494 654h268l22 22H472l22-22Z" fill="#FFFFFF"/>
+    <path d="M540 568h176M540 596h120"/>
+  </g>
+  <g stroke="#4D4747" stroke-opacity=".45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="334" cy="466" r="44" fill="#FFFFFF"/>
+    <path d="M276 654c0-84 24-134 58-134s58 50 58 134" fill="#FFFFFF"/>
+    <path d="M382 560c34 12 62 38 86 68" fill="none"/>
+    <circle cx="486" cy="520" r="34" fill="#FFFFFF"/>
+    <path d="M436 654c0-58 20-88 50-88s50 30 50 88" fill="#FFFFFF"/>
+    <path d="M524 600c26 10 44 26 56 44" fill="none"/>
+    <circle cx="778" cy="466" r="44" fill="#FFFFFF"/>
+    <path d="M720 654c0-84 24-134 58-134s58 50 58 134" fill="#FFFFFF"/>
+    <path d="M730 560c-30 14-56 40-78 68" fill="none"/>
+  </g>
+  <g fill="none" stroke="#D82424" stroke-width="6" stroke-linecap="round">
+    <path d="M322 520c8 18 22 28 36 32"/>
+    <path d="M470 570c8 12 18 20 30 24"/>
+    <path d="M764 520c-8 18-20 28-34 32"/>
+  </g>
+  <g fill="#D82424">
+    <circle cx="628" cy="568" r="9"/>
+    <circle cx="628" cy="596" r="6" fill-opacity=".5"/>
+    <circle cx="190" cy="242" r="5"/>
+    <circle cx="420" cy="330" r="5"/>
+  </g>
+</svg>

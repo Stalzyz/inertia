@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" width="1200" height="960" role="img" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="halfRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="50%" stop-color="#D82424"/><stop offset="50%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="960" rx="48" fill="#FFF7F7"/>
+  <g fill="none" stroke="#E3D7D7" stroke-width="2">
+    <rect x="200" y="150" width="660" height="420" rx="42" fill="#FDECEC"/>
+    <rect x="260" y="210" width="660" height="420" rx="42" fill="#FFFFFF"/>
+    <rect x="320" y="270" width="660" height="420" rx="42" fill="#FFFFFF"/>
+  </g>
+  <g transform="translate(430 410)">
+    <path d="m85 0 26 53 59 9-43 42 10 59-52-28-52 28 10-59-43-42 59-9L85 0Z" fill="none" stroke="#4D4747" stroke-width="4"/>
+    <path d="m275 0 26 53 59 9-43 42 10 59-52-28-52 28 10-59-43-42 59-9L275 0Z" fill="url(#halfRed)" stroke="#D82424" stroke-width="4"/>
+    <path d="m465 0 26 53 59 9-43 42 10 59-52-28-52 28 10-59-43-42 59-9L465 0Z" fill="#D82424"/>
+  </g>
+  <g fill="none" stroke="#F2AFAF" stroke-width="3" stroke-linecap="round">
+    <path d="M390 770h420"/>
+  </g>
+</svg>
