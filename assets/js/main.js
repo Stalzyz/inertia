@@ -29,9 +29,10 @@
 			flipResetTimers.forEach(function (timer) { window.clearTimeout(timer); });
 			flipResetTimers = [];
 		}
-		function setFlipSlide(next) {
+		function setFlipSlide(next, direction) {
 			if (next === flipIndex || !flipPages[next]) return;
 			clearFlipResets();
+			flipbook.classList.toggle('is-reverse', direction < 0);
 			var outgoing = flipPages[flipIndex];
 			var incoming = flipPages[next];
 			outgoing.classList.remove('is-active');
@@ -50,7 +51,7 @@
 				else dot.removeAttribute('aria-current');
 			});
 		}
-		function flipStep(direction) { setFlipSlide((flipIndex + direction + flipPages.length) % flipPages.length); }
+		function flipStep(direction) { setFlipSlide((flipIndex + direction + flipPages.length) % flipPages.length, direction); }
 		function stopFlip() { if (flipTimer) { window.clearInterval(flipTimer); flipTimer = null; } }
 		function startFlip() {
 			stopFlip();
@@ -71,7 +72,7 @@
 		if (flipPrev) flipPrev.addEventListener('click', function () { flipStep(-1); startFlip(); });
 		if (flipNext) flipNext.addEventListener('click', function () { flipStep(1); startFlip(); });
 		flipDots.forEach(function (dot, i) {
-			dot.addEventListener('click', function () { setFlipSlide(i); startFlip(); });
+			dot.addEventListener('click', function () { setFlipSlide(i, i >= flipIndex ? 1 : -1); startFlip(); });
 		});
 		if (flipPause) flipPause.addEventListener('click', function () { setFlipPaused(!flipPaused); });
 		flipbook.addEventListener('mouseenter', stopFlip);
@@ -564,8 +565,31 @@
 		var speedVerdict = document.getElementById('speedtestVerdict');
 		var verdictGrade = document.getElementById('verdictGrade');
 		var verdictText = document.getElementById('verdictText');
+		var speedLeadPanel = document.getElementById('speedtestLead');
+		var speedLeadForm = document.getElementById('speedLeadForm');
+		var speedLeadTitle = document.getElementById('speedLeadTitle');
+		var speedLeadText = document.getElementById('speedLeadText');
+		var speedLeadSubmit = document.getElementById('speedLeadSubmit');
 		var speedRunning = false;
 		var maxGaugeDash = 415; // full stroke arc length
+		var lastSpeedResultId = '';
+		var lastSpeedMetrics = null;
+		var speedLeadButtonText = speedLeadSubmit ? speedLeadSubmit.innerHTML : '';
+
+		function logSpeedResult(payload) {
+			try {
+				return fetch('/api/speedtest/result', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload)
+				}).then(function (res) { return res.ok ? res.json() : {}; })
+					.then(function (data) { lastSpeedResultId = data.id || ''; })
+					.catch(function () { lastSpeedResultId = ''; });
+			} catch (e) {
+				lastSpeedResultId = '';
+				return Promise.resolve();
+			}
+		}
 
 		function updateGauge(mbps) {
 			if (!gaugeVal || !gaugeProg) return;
@@ -589,7 +613,37 @@
 			if (valUploadPeak) valUploadPeak.textContent = 'Peak: -- Mbps';
 			if (speedProgBar) speedProgBar.style.width = '0%';
 			if (speedVerdict) speedVerdict.hidden = true;
+			lastSpeedResultId = '';
+			lastSpeedMetrics = null;
+			if (speedLeadPanel) speedLeadPanel.hidden = true;
+			if (speedLeadForm) {
+				speedLeadForm.reset();
+				status(speedLeadForm, '');
+			}
+			if (speedLeadSubmit) {
+				speedLeadSubmit.innerHTML = speedLeadButtonText;
+				speedLeadSubmit.disabled = false;
+			}
+			if (speedLeadForm) delete speedLeadForm.dataset.sent;
 			startSpeedBtn.disabled = false;
+		}
+
+		function showSpeedLead(metrics) {
+			if (!speedLeadPanel) return;
+			if (metrics.download < 30) {
+				if (speedLeadTitle) speedLeadTitle.textContent = 'Want us to check your line?';
+				if (speedLeadText) speedLeadText.textContent = 'Your connection is below typical fibre performance. Leave your details and we will check the line options available at your location.';
+			} else if (metrics.download < 100) {
+				if (speedLeadTitle) speedLeadTitle.textContent = 'See if a faster plan is available';
+				if (speedLeadText) speedLeadText.textContent = 'Your result has room for improvement. Leave your details and we will check the plans and availability at your location.';
+			} else if (metrics.ping >= 50 || metrics.jitter >= 20) {
+				if (speedLeadTitle) speedLeadTitle.textContent = 'Let us review your connection quality';
+				if (speedLeadText) speedLeadText.textContent = 'Your speed looks strong, but latency varies. Leave your details for a network quality check.';
+			} else {
+				if (speedLeadTitle) speedLeadTitle.textContent = 'Already getting strong speeds?';
+				if (speedLeadText) speedLeadText.textContent = 'Leave your details to compare M-Tel fibre plans and check availability at your location.';
+			}
+			speedLeadPanel.hidden = false;
 		}
 
 		async function runPingTest() {
@@ -705,13 +759,14 @@
 
 		async function startSpeedTest() {
 			if (speedRunning) return;
+			resetSpeedTestUI();
 			speedRunning = true;
 			startSpeedBtn.disabled = true;
 			startSpeedBtn.classList.add('is-running');
 			if (speedVerdict) speedVerdict.hidden = true;
 
 			try {
-				await runPingTest();
+				var pingResult = await runPingTest();
 				var dlSpeed = await runDownloadTest();
 				var ulSpeed = await runUploadTest(dlSpeed);
 
@@ -735,6 +790,15 @@
 						if (verdictText) verdictText.textContent = 'Your current connection may bottleneck heavy concurrent usage. Consider upgrading to M-Tel FTTH Fibernet for 1:1 dedicated bandwidth up to 1 Gbps.';
 					}
 				}
+				lastSpeedMetrics = {
+					ping: pingResult.minPing,
+					jitter: pingResult.jitter,
+					download: dlSpeed,
+					upload: ulSpeed,
+					verdict: verdictGrade ? verdictGrade.textContent : ''
+				};
+				await logSpeedResult(lastSpeedMetrics);
+				showSpeedLead(lastSpeedMetrics);
 			} finally {
 				speedRunning = false;
 				startSpeedBtn.disabled = false;
@@ -746,6 +810,73 @@
 		if (repeatSpeedBtn) repeatSpeedBtn.addEventListener('click', function () {
 			resetSpeedTestUI();
 			startSpeedTest();
+		});
+
+		if (speedLeadForm) speedLeadForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+			var name = document.getElementById('speedLeadName');
+			var phone = document.getElementById('speedLeadPhone');
+			var email = document.getElementById('speedLeadEmail');
+			var area = document.getElementById('speedLeadArea');
+			var provider = document.getElementById('speedLeadProvider');
+			var consent = document.getElementById('speedLeadConsent');
+			var honeypot = speedLeadForm.querySelector('[name="website"]');
+			var digits = phone ? phone.value.replace(/\D/g, '') : '';
+
+			if (honeypot && honeypot.value) return;
+			if (!name || !name.value.trim() || !phone || !area || !area.value.trim()) {
+				status(speedLeadForm, 'Please complete your name, mobile number and area.', true);
+				return;
+			}
+			if (digits.length < 10 || digits.length > 15) {
+				status(speedLeadForm, 'Please enter a valid mobile number.', true);
+				if (phone) phone.classList.add('is-invalid');
+				return;
+			}
+			if (phone) phone.classList.remove('is-invalid');
+			if (email && email.value.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
+				status(speedLeadForm, 'Please enter a valid email address.', true);
+				return;
+			}
+			if (!consent || !consent.checked) {
+				status(speedLeadForm, 'Please confirm that we may contact you about your result.', true);
+				return;
+			}
+			if (!lastSpeedMetrics) {
+				status(speedLeadForm, 'Please run the speed test again before requesting a line check.', true);
+				return;
+			}
+
+			if (speedLeadSubmit) speedLeadSubmit.disabled = true;
+			status(speedLeadForm, '');
+			fetch('/api/speedtest/lead', {
+				method: 'POST',
+				headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+				credentials: 'same-origin',
+				body: JSON.stringify({
+					name: name.value.trim(),
+					phone: phone.value.trim(),
+					email: email ? email.value.trim() : '',
+					area: area.value.trim(),
+					provider: provider ? provider.value.trim() : '',
+					consent: true,
+					resultId: lastSpeedResultId,
+					metrics: lastSpeedMetrics,
+					website: honeypot ? honeypot.value : ''
+				})
+			})
+				.then(function (res) { return res.json().catch(function () { return { ok: false, message: 'Unable to submit.' }; }); })
+				.then(function (data) {
+					status(speedLeadForm, data.message || '', !data.ok);
+					if (data.ok) {
+						speedLeadForm.reset();
+						speedLeadForm.dataset.sent = 'true';
+						lastSpeedMetrics = null;
+						if (speedLeadSubmit) speedLeadSubmit.textContent = 'Line check requested';
+					}
+				})
+				.catch(function () { status(speedLeadForm, 'Unable to submit. Please try again.', true); })
+				.then(function () { if (speedLeadSubmit && !speedLeadForm.dataset.sent) speedLeadSubmit.disabled = false; });
 		});
 	}
 
@@ -769,6 +900,22 @@
 		var resBookCta = document.getElementById('resBookCta');
 		var quickChips = Array.prototype.slice.call(document.querySelectorAll('.coverage-quick-chips .chip-btn'));
 		var mapNodes = Array.prototype.slice.call(document.querySelectorAll('.topology-map-svg .map-node'));
+
+		function logCoverage(data) {
+			try {
+				fetch('/api/coverage/log', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						query: coverageInput ? coverageInput.value.trim() : data.pin,
+						pin: data.pin,
+						area: data.name,
+						status: data.status
+					}),
+					keepalive: true
+				}).catch(function () {});
+			} catch (e) { /* telemetry must never break the checker */ }
+		}
 
 		var COVERAGE_DATA = {
 			'641035': {
@@ -895,6 +1042,7 @@
 
 		function renderCoverageResult(data) {
 			if (!data) return;
+			logCoverage(data);
 			if (resLocationTitle) resLocationTitle.textContent = data.name + ' — ' + data.pin;
 			if (resLocationDesc) resLocationDesc.textContent = data.desc;
 			if (resStatusBadge) resStatusBadge.textContent = data.status;

@@ -1,0 +1,160 @@
+{
+  "generatedAt": "2026-11-22T18:46:45.417Z",
+  "base": "http://localhost:4173",
+  "viewports": {
+    "desktop": {
+      "label": "Desktop",
+      "width": 1440,
+      "height": 900,
+      "pages": [
+        {
+          "slug": "01-home",
+          "title": "Home",
+          "file": "index.html",
+          "width": 1440,
+          "height": 13032
+        },
+        {
+          "slug": "02-services",
+          "title": "Services",
+          "file": "services.html",
+          "width": 1440,
+          "height": 6313
+        },
+        {
+          "slug": "03-about-us",
+          "title": "About Us",
+          "file": "about-us.html",
+          "width": 1440,
+          "height": 5108
+        },
+        {
+          "slug": "04-clients",
+          "title": "Clients",
+          "file": "clients-list.html",
+          "width": 1440,
+          "height": 4250
+        },
+        {
+          "slug": "05-contact-us",
+          "title": "Contact Us",
+          "file": "contact-us.html",
+          "width": 1440,
+          "height": 2230
+        },
+        {
+          "slug": "06-privacy-policy",
+          "title": "Privacy Policy",
+          "file": "privacy-policy.html",
+          "width": 1440,
+          "height": 2257
+        },
+        {
+          "slug": "07-terms-conditions",
+          "title": "Terms & Conditions",
+          "file": "terms-conditions.html",
+          "width": 1440,
+          "height": 2349
+        },
+        {
+          "slug": "08-refund-policy",
+          "title": "Refund Policy",
+          "file": "refund-policy.html",
+          "width": 1440,
+          "height": 2134
+        },
+        {
+          "slug": "09-cookies-policy",
+          "title": "Cookies Policy",
+          "file": "cookies-policy.html",
+          "width": 1440,
+          "height": 2198
+        },
+        {
+          "slug": "10-data-deletion",
+          "title": "Data Deletion",
+          "file": "data-deletion.html",
+          "width": 1440,
+          "height": 2105
+        }
+      ]
+    },
+    "mobile": {
+      "label": "Mobile",
+      "width": 390,
+      "height": 844,
+      "pages": [
+        {
+          "slug": "01-home",
+          "title": "Home",
+          "file": "index.html",
+          "width": 390,
+          "height": 15785
+        },
+        {
+          "slug": "02-services",
+          "title": "Services",
+          "file": "services.html",
+          "width": 390,
+          "height": 8579
+        },
+        {
+          "slug": "03-about-us",
+          "title": "About Us",
+          "file": "about-us.html",
+          "width": 390,
+          "height": 8327
+        },
+        {
+          "slug": "04-clients",
+          "title": "Clients",
+          "file": "clients-list.html",
+          "width": 390,
+          "height": 5265
+        },
+        {
+          "slug": "05-contact-us",
+          "title": "Contact Us",
+          "file": "contact-us.html",
+          "width": 390,
+          "height": 3441
+        },
+        {
+          "slug": "06-privacy-policy",
+          "title": "Privacy Policy",
+          "file": "privacy-policy.html",
+          "width": 390,
+          "height": 3681
+        },
+        {
+          "slug": "07-terms-conditions",
+          "title": "Terms & Conditions",
+          "file": "terms-conditions.html",
+          "width": 390,
+          "height": 3762
+        },
+        {
+          "slug": "08-refund-policy",
+          "title": "Refund Policy",
+          "file": "refund-policy.html",
+          "width": 390,
+          "height": 3418
+        },
+        {
+          "slug": "09-cookies-policy",
+          "title": "Cookies Policy",
+          "file": "cookies-policy.html",
+          "width": 390,
+          "height": 3567
+        },
+        {
+          "slug": "10-data-deletion",
+          "title": "Data Deletion",
+          "file": "data-deletion.html",
+          "width": 390,
+          "height": 3475
+        }
+      ]
+    }
+  }
+}

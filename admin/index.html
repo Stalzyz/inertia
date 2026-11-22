@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>M-Tel Networks — Admin</title>
+	<link rel="stylesheet" href="/admin/styles.css">
+</head>
+<body>
+
+	<section class="login-screen" id="loginView" hidden>
+		<form class="login-card" id="loginForm" novalidate>
+			<div class="login-brand" aria-hidden="true"><span>M</span> TEL NETWORKS</div>
+			<h1>Admin panel</h1>
+			<p class="login-intro">Sign in to manage enquiries, content and site settings.</p>
+			<p class="form-error" id="loginError" role="alert" hidden></p>
+			<label for="loginUsername">Username</label>
+			<input id="loginUsername" name="username" type="text" autocomplete="username" required maxlength="40">
+			<label for="loginPassword">Password</label>
+			<input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+			<button class="btn btn-primary" type="submit">Sign in</button>
+			<a class="login-back" href="/">← Back to website</a>
+		</form>
+	</section>
+
+	<div class="app" id="appView" hidden>
+		<aside class="sidebar" id="sidebar">
+			<div class="side-brand">
+				<span class="side-logo" aria-hidden="true">M</span>
+				<span><strong>M-TEL</strong><small>NETWORKS · ADMIN</small></span>
+			</div>
+			<nav class="side-nav" id="sideNav" aria-label="Admin modules">
+				<button type="button" data-action="nav" data-module="dashboard" class="is-active">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z"/></svg>Dashboard
+				</button>
+				<button type="button" data-action="nav" data-module="enquiries">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4V5Zm2 3v2h12V8H6Zm0 5v2h8v-2H6Z"/></svg>Enquiries
+				</button>
+				<button type="button" data-action="nav" data-module="packages">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Zm-9 5 9 5 9-5M12 13v8"/></svg>Packages
+				</button>
+				<button type="button" data-action="nav" data-module="testimonials">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 6h11v3H7V6Zm0 5h11v3H7v-3Zm0 5h7v3H7v-3ZM4 4v16h1V4H4Z"/></svg>Testimonials &amp; content
+				</button>
+				<button type="button" data-action="nav" data-module="results">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 16V9m4 7V5m4 11v-5m4 5V8"/></svg>Speed &amp; coverage
+				</button>
+				<button type="button" data-action="nav" data-module="users">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 6a3 3 0 0 1 0 6m1 2a5 5 0 0 1 4 5"/></svg>Users
+				</button>
+				<button type="button" data-action="nav" data-module="settings">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M4 12h2m12 0h2M12 4v2m0 12v2M6 6l1.5 1.5M16.5 16.5 18 18M18 6l-1.5 1.5M7.5 16.5 6 18"/></svg>Settings
+				</button>
+				<button type="button" data-action="nav" data-module="email">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3V6Zm0 1 9 6 9-6"/></svg>Email settings
+				</button>
+				<button type="button" data-action="nav" data-module="profile">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>My profile
+				</button>
+			</nav>
+			<div class="side-foot">
+				<span class="side-avatar" id="sideAvatar" aria-hidden="true">—</span>
+				<span><strong id="sideUser">—</strong><small id="sideRole">—</small></span>
+			</div>
+		</aside>
+
+		<div class="scrim" id="scrim" data-action="toggle-menu" hidden></div>
+
+		<div class="workspace">
+			<header class="topbar">
+				<button class="icon-btn menu-btn" type="button" data-action="toggle-menu" aria-label="Toggle navigation">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+				</button>
+				<h1 id="pageTitle">Dashboard</h1>
+				<div class="topbar-actions">
+					<a class="btn btn-quiet" href="/" target="_blank" rel="noopener">View site ↗</a>
+					<button class="btn btn-quiet" type="button" data-action="logout">Sign out</button>
+				</div>
+			</header>
+			<main class="view" id="view" tabindex="-1"></main>
+		</div>
+	</div>
+
+	<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+	<div id="modalRoot"></div>
+
+	<script src="/admin/app.js" defer></script>
+</body>
+</html>

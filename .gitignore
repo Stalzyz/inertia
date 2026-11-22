@@ -2,3 +2,8 @@
 Thumbs.db
 node_modules/
 *.log
+
+# Admin panel runtime data: submissions, accounts and sessions are local state,
+# not source. Defaults live in lib/defaults.js.
+data/*
+!data/.gitkeep
