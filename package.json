@@ -1,0 +1,11 @@
+{
+  "name": "mtel-network-site",
+  "version": "1.0.0",
+  "description": "Static site for M‑Tel Networks",
+  "main": "src/build.js",
+  "scripts": {
+    "build": "node src/build.js"
+  },
+  "author": "Stalin Kumar",
+  "license": "MIT"
+}
