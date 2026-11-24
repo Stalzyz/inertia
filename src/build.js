@@ -239,12 +239,14 @@ function build() {
 
     fs.writeFileSync(path.join(root, page.file), html);
 
-    // Original destinations preserved as routes handled by server.js; here we
-    // also emit a tiny client-side redirect for file:// or static hosts.
-    if (legacyRoutes[page.file]) {
-      const redirect = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${page.file}"><title>${page.title}</title><script>location.replace('${page.file}' + location.hash);</script></head><body><a href="${page.file}">Continue</a></body></html>\n`;
-      fs.writeFileSync(path.join(root, legacyRoutes[page.file]), redirect);
-    }
+  // Original destinations preserved as routes handled by server.js; here we
+  // also emit legacy .php files so every link works on purely static hosts.
+  Object.entries(legacyRoutes).forEach(([legacyFile, targetHtml]) => {
+    const page = pages.find((p) => p.file === targetHtml);
+    const title = page ? page.title : 'M-tel';
+    const redirect = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=${targetHtml}"><title>${title}</title><script>location.replace('${targetHtml}' + location.hash);</script></head><body><a href="${targetHtml}">Continue</a></body></html>\n`;
+    fs.writeFileSync(path.join(root, legacyFile), redirect);
+  });
   });
 
   buildSearchIndex(data);

@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=data-deletion.html"><title>M-tel — Data Deletion</title><script>location.replace('data-deletion.html' + location.hash);</script></head><body><a href="data-deletion.html">Continue</a></body></html>

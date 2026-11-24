@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=terms-conditions.html"><title>M-tel — Terms and Conditions</title><script>location.replace('terms-conditions.html' + location.hash);</script></head><body><a href="terms-conditions.html">Continue</a></body></html>

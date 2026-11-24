@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=index.html"><title>M-tel</title><script>location.replace('index.html' + location.hash);</script></head><body><a href="index.html">Continue</a></body></html>

@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=contact-us.html"><title>M-tel — Contact Us</title><script>location.replace('contact-us.html' + location.hash);</script></head><body><a href="contact-us.html">Continue</a></body></html>

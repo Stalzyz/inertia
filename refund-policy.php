@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=refund-policy.html"><title>M-tel — Refund Policy</title><script>location.replace('refund-policy.html' + location.hash);</script></head><body><a href="refund-policy.html">Continue</a></body></html>

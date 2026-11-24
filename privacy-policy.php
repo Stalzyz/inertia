@@ -1,0 +1,1 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=privacy-policy.html"><title>M-tel — Privacy Policy</title><script>location.replace('privacy-policy.html' + location.hash);</script></head><body><a href="privacy-policy.html">Continue</a></body></html>
