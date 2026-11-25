@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sample-atlas-clothing",
+    "quote": "SAMPLE — Replace with an approved client quote about the Atlas Clothing website project before publishing.",
+    "name": "Stalin",
+    "company": "Atlas Clothing",
+    "projectType": "E-commerce website — Atlas Clothing",
+    "published": true
+  },
+  {
+    "id": "sample-faith-model-school",
+    "quote": "SAMPLE — Replace with an approved client quote about the Faith Model School website project before publishing.",
+    "name": "SAMPLE — Faith Model School",
+    "company": "Faith Model School",
+    "projectType": "Website design — Faith Model School",
+    "published": true
+  },
+  {
+    "id": "sample-mindfl",
+    "quote": "SAMPLE — Replace with an approved client quote about the MINDFL website project before publishing.",
+    "name": "SAMPLE — MINDFL",
+    "company": "MINDFL",
+    "projectType": "Website project — MINDFL",
+    "published": true
+  }
+]

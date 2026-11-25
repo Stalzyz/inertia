@@ -1,0 +1,566 @@
+[
+  {
+    "slug": "atlas",
+    "name": "Atlas Clothing",
+    "domain": "atlas.grekam.in",
+    "url": "https://atlas.grekam.in/",
+    "category": "E-commerce",
+    "featured": true,
+    "image": "/portfolio/atlas.webp",
+    "imageAlt": "Homepage of the Atlas Clothing handloom and silk saree store",
+    "summary": "A heritage handloom store organised around collections, fabric and occasion.",
+    "industry": "Fashion & retail",
+    "services": [
+      "E-commerce",
+      "Art direction",
+      "Development"
+    ],
+    "overview": "Atlas Clothing presents handloom and silk sarees as collectible pieces. The homepage pairs an editorial hero with clear shopping routes, then breaks the catalogue into collections, fabrics and occasions so visitors can enter the range from more than one direction.",
+    "sections": [
+      "Shop by Collection",
+      "New Arrivals",
+      "The Festive Edit",
+      "Shop by Fabric",
+      "Best Sellers",
+      "Why Choose Us"
+    ],
+    "approach": [
+      {
+        "title": "A catalogue with entry points",
+        "body": "Collections, fabrics and best sellers are surfaced as separate paths, so a shopper can browse by weave, by occasion or by what is new."
+      },
+      {
+        "title": "Product-led storytelling",
+        "body": "Large type, generous spacing and close-up product moments give the garments room to carry the page rather than competing with interface chrome."
+      },
+      {
+        "title": "Reassurance built in",
+        "body": "Shipping, returns and silk-mark information sit near the opening message, answering practical questions before a visitor reaches checkout."
+      }
+    ],
+    "notes": [
+      "The hero leads with the Autumn Heritage collection and two distinct shopping actions.",
+      "Category blocks show style counts alongside each collection."
+    ]
+  },
+  {
+    "slug": "faith-model-school",
+    "name": "Faith Model School",
+    "domain": "faithmodelschool.com",
+    "url": "https://faithmodelschool.com/",
+    "category": "Education",
+    "featured": true,
+    "image": "/portfolio/faith-model-school.webp",
+    "imageAlt": "Homepage of Faith Model School with its admissions and campus story",
+    "summary": "An admissions-focused school website built around a warm, page-turning narrative.",
+    "industry": "Education",
+    "services": [
+      "Website design",
+      "Interaction",
+      "Development"
+    ],
+    "overview": "Faith Model School introduces its campus, curriculum and admissions in a single guided narrative. The site opens with a progressive-learning statement, moves through the school's promise and journey, and keeps the 2027–28 application prompt visible throughout.",
+    "sections": [
+      "A Progressive Learning Village",
+      "Admissions Open 2027–28",
+      "Welcome to Faith Model School",
+      "By the Numbers",
+      "Our Educational Promise",
+      "A Journey of Learning"
+    ],
+    "approach": [
+      {
+        "title": "A story you can scroll",
+        "body": "The opening sequence behaves like turning pages, giving the school's character and campus imagery a slower, more deliberate pace than a standard grid of cards."
+      },
+      {
+        "title": "Admissions as the through-line",
+        "body": "Application prompts recur at natural pauses, so the next step is always visible without taking over the educational story."
+      },
+      {
+        "title": "Practical detail, clearly signposted",
+        "body": "CBSE affiliation, disclosure links, campus information and community sections are separated into named routes rather than buried in prose."
+      }
+    ],
+    "notes": [
+      "A video-reel control sits alongside the opening campus sequence.",
+      "The site distinguishes between its established date and the current admissions year."
+    ]
+  },
+  {
+    "slug": "mindfl",
+    "name": "MINDFL",
+    "domain": "mindfl.grekam.in/why-mindfl",
+    "url": "https://mindfl.grekam.in/why-mindfl",
+    "category": "Education",
+    "featured": false,
+    "image": "/portfolio/mindfl.webp",
+    "imageAlt": "MINDFL early-years learning village page",
+    "summary": "An early-years school page framed around nature, play and the child–family–educator relationship.",
+    "industry": "Early-years education",
+    "services": [
+      "Website design",
+      "Content structure",
+      "Development"
+    ],
+    "overview": "The MINDFL page explains a learning philosophy before it lists programme details. Nature, flexible indoor–outdoor space and progressive opportunities are presented as three pillars, with the relationship between child, family and educator placed at the centre.",
+    "sections": [
+      "The Child. The Family. The Educator.",
+      "How We Teach & How We Grow",
+      "Our Age-Appropriate Programs",
+      "The MINDFL Difference",
+      "Strong foundations for a better future",
+      "Join Our Community"
+    ],
+    "approach": [
+      {
+        "title": "Philosophy first",
+        "body": "The page establishes its educational approach in plain language before moving to programmes and admissions, so the reader understands what the school stands for."
+      },
+      {
+        "title": "Pillars instead of feature lists",
+        "body": "Nature, fluid spaces and progressive opportunities are each given a short, memorable explanation rather than a dense paragraph."
+      },
+      {
+        "title": "A clear route to enrolment",
+        "body": "Learn More and Begin Journey actions carry visitors from the philosophy into the wider school site."
+      }
+    ],
+    "notes": [
+      "The page is a dedicated 'why MINDFL' route, not the school homepage.",
+      "Location and learning style are stated near the opening message."
+    ]
+  },
+  {
+    "slug": "mca",
+    "name": "MediCore Academy",
+    "domain": "mca.grekam.in",
+    "url": "https://mca.grekam.in/",
+    "category": "Education",
+    "featured": false,
+    "image": "/portfolio/mca.webp",
+    "imageAlt": "MediCore Academy homepage for clinician-led medical courses",
+    "summary": "A clinician-led learning platform with a direct programme-inquiry route.",
+    "industry": "Medical education",
+    "services": [
+      "Website design",
+      "Lead capture",
+      "Development"
+    ],
+    "overview": "MediCore Academy brings courses, mentorship and professional collaboration into one place. The homepage pairs a 'for the doctors, by the doctors' position with a quick inquiry form for batch dates, syllabus and hands-on simulation schedules.",
+    "sections": [
+      "Inquire About Programmes",
+      "Featured Clinical & Certification Programs",
+      "Life & Learning at MediCore Academy",
+      "Scrubbed In Podcast",
+      "Start Learning Today"
+    ],
+    "approach": [
+      {
+        "title": "An immediate inquiry path",
+        "body": "A short form asks for name, contact details and programme of interest, giving the admissions team enough context to respond with relevant information."
+      },
+      {
+        "title": "Credentials made legible",
+        "body": "Accreditation, clinical credits and the Sharjah hub are given dedicated space, because trust is central to a professional education decision."
+      },
+      {
+        "title": "More than a course list",
+        "body": "Programmes sit alongside community, podcast and learning-life content, so the site reads as an ecosystem rather than a catalogue."
+      }
+    ],
+    "notes": [
+      "Student sign-in and registration are available in the top navigation.",
+      "The inquiry block states confidentiality and response expectations."
+    ]
+  },
+  {
+    "slug": "garage",
+    "name": "Garage CRM",
+    "domain": "garage.grekam.in",
+    "url": "https://garage.grekam.in/",
+    "category": "Software",
+    "featured": true,
+    "image": "/portfolio/garage.webp",
+    "imageAlt": "Garage CRM product homepage showing its sales and operations platform",
+    "summary": "A product site for an all-in-one sales, invoicing and operations platform.",
+    "industry": "B2B software",
+    "services": [
+      "Product design",
+      "Website design",
+      "Development"
+    ],
+    "overview": "Garage presents a CRM, dialler, proposals, GST retainers, job cards, HR and WhatsApp alerts as one operating system. The page is built to explain breadth quickly: a direct value proposition, a workspace demo, then feature groups aimed at specific business roles.",
+    "sections": [
+      "Engineered for Modern Agencies, Studios & B2B Businesses",
+      "Connect Your Stack. Automate Your Work.",
+      "Everything Needed to Run & Scale Your Business",
+      "Automated WhatsApp Alerts",
+      "Frequently Asked Questions"
+    ],
+    "approach": [
+      {
+        "title": "One product, many jobs",
+        "body": "The opening promise names three outcomes — more clients, faster deals, scale — before the page unpacks the individual modules behind them."
+      },
+      {
+        "title": "Demo before detail",
+        "body": "Live workspace access is offered early, so a visitor can inspect the product instead of relying only on the marketing copy."
+      },
+      {
+        "title": "Role-based framing",
+        "body": "Separate demo routes for garage owners and resellers help different audiences see the version of the product that applies to them."
+      }
+    ],
+    "notes": [
+      "The navigation includes product, features, case studies, pricing and login routes.",
+      "Feature blocks are grouped by sales, client communication and operations."
+    ]
+  },
+  {
+    "slug": "academy",
+    "name": "Grekam Academy",
+    "domain": "academy.grekam.in",
+    "url": "https://academy.grekam.in/",
+    "category": "Interactive",
+    "featured": false,
+    "image": "/portfolio/academy.webp",
+    "imageAlt": "Grekam Academy interactive Swiss-grid landing experience",
+    "summary": "An interactive entry experience that teaches alignment by letting visitors snap a layout to the grid.",
+    "industry": "Design education",
+    "services": [
+      "Interaction design",
+      "Creative development"
+    ],
+    "overview": "Grekam Academy opens with a deliberate puzzle: a skewed Swiss grid, a target axis and a snap control. The visitor resolves the layout to enter, making the school's interest in systems and craft tangible before any conventional course information appears.",
+    "sections": [
+      "Layout System Misaligned",
+      "Design Is About Aligning Elements",
+      "Swiss Grid Snap Required",
+      "Snap to Grid"
+    ],
+    "approach": [
+      {
+        "title": "A point of view, demonstrated",
+        "body": "Instead of describing a design curriculum, the page lets a visitor perform one small design decision and see the result immediately."
+      },
+      {
+        "title": "System cues as visual language",
+        "body": "Coordinates, axis markers and monospaced UI labels turn the page into a working diagram rather than a decorative mock-up."
+      },
+      {
+        "title": "A deliberate threshold",
+        "body": "The interaction acts as an entry gate, so the experience begins with participation rather than a passive hero image."
+      }
+    ],
+    "notes": [
+      "A skip control is available for visitors who do not want to complete the interaction.",
+      "The captured thumbnail shows the entry state; the page changes after the grid snaps."
+    ]
+  },
+  {
+    "slug": "raaghas",
+    "name": "Raaghas",
+    "domain": "raaghas.in",
+    "url": "https://raaghas.in/",
+    "category": "E-commerce",
+    "featured": true,
+    "image": "/portfolio/raaghas.webp",
+    "imageAlt": "Raaghas online store for premium casual and office wear",
+    "summary": "An everyday-wear store organised by mood, collection and occasion.",
+    "industry": "Fashion & retail",
+    "services": [
+      "E-commerce",
+      "Design",
+      "Development"
+    ],
+    "overview": "Raaghas sells premium casual and office wear through a storefront built around quick discovery. New drops, mood-based browsing, office essentials and best sellers are surfaced on the homepage, with reward and lookbook routes alongside the shop.",
+    "sections": [
+      "Fresh Drops",
+      "Shop By Mood",
+      "Trending Office Essentials",
+      "Best Sellers",
+      "Meet Raaghas",
+      "What Our Customers Say"
+    ],
+    "approach": [
+      {
+        "title": "Shopping by feeling",
+        "body": "Mood-based navigation gives shoppers a route that is not defined only by garment type, which suits a brand built around everyday dressing."
+      },
+      {
+        "title": "Offers without clutter",
+        "body": "Clearance pricing and offers are presented in repeated product modules, keeping the promotional layer inside the catalogue rather than overwhelming the page."
+      },
+      {
+        "title": "Reasons to return",
+        "body": "A rewards programme and lookbook sit next to the store, giving the homepage more than one reason to come back."
+      }
+    ],
+    "notes": [
+      "Free-shipping and loyalty messaging appears at the top of the page.",
+      "The store includes account login and collection-level routes."
+    ]
+  },
+  {
+    "slug": "grafty",
+    "name": "Grafty",
+    "domain": "grafty.pro",
+    "url": "https://grafty.pro/",
+    "category": "Software",
+    "featured": true,
+    "image": "/portfolio/grafty.webp",
+    "imageAlt": "Grafty WhatsApp automation platform homepage",
+    "summary": "A WhatsApp automation platform explained through outcomes, flows and a product preview.",
+    "industry": "B2B software",
+    "services": [
+      "Product marketing site",
+      "Design",
+      "Development"
+    ],
+    "overview": "Grafty automates WhatsApp replies, campaigns and sales journeys. The site opens with the problem of slow replies, then shows a phone-conversation preview, a visual flow builder and a feature set spanning campaigns, inbox, CRM, billing and integrations.",
+    "sections": [
+      "See Grafty in Action",
+      "AI Knowledge Engine",
+      "Omni-channel Synergy",
+      "How Grafty Helps You Scale",
+      "Everything Your Business Needs",
+      "Get Live in 4 Minutes"
+    ],
+    "approach": [
+      {
+        "title": "Start with the pain",
+        "body": "The headline names a specific, familiar failure — slow replies — before introducing the product, so the value is understood in a sentence."
+      },
+      {
+        "title": "Show the interface",
+        "body": "A conversation preview and flow-builder language make an invisible automation product easier to picture."
+      },
+      {
+        "title": "Low-friction start",
+        "body": "Free trial and partner routes are placed alongside the feature story for two different kinds of visitor."
+      }
+    ],
+    "notes": [
+      "The page distinguishes between the official WhatsApp Business API and Grafty's automation layer.",
+      "A white-label platform announcement sits at the top of the page."
+    ]
+  },
+  {
+    "slug": "viktoreus",
+    "name": "Viktoreus Automation",
+    "domain": "viktoreus.in",
+    "url": "https://viktoreus.in/",
+    "category": "Corporate",
+    "featured": false,
+    "image": "/portfolio/viktoreus.webp",
+    "imageAlt": "Viktoreus industrial automation company homepage",
+    "summary": "A direct corporate site for an industrial automation distributor.",
+    "industry": "Industrial automation",
+    "services": [
+      "Website design",
+      "Content structure",
+      "Development"
+    ],
+    "overview": "Viktoreus presents robotics, guided vehicles and automation products alongside company background, expertise and core values. The site keeps contact details prominent, which suits a technical supplier whose visitors often want to speak to someone about a specific application.",
+    "sections": [
+      "About Viktoreus",
+      "Our Expertise",
+      "Core Values",
+      "Founder's Words",
+      "Major Brands",
+      "Get in Touch"
+    ],
+    "approach": [
+      {
+        "title": "Products before philosophy",
+        "body": "Robotics, cobots and AGVs are named in the opening section so a technical visitor can confirm relevance immediately."
+      },
+      {
+        "title": "Trust through specifics",
+        "body": "Founder introduction, operating regions and represented brands give substance to the company's claim of reliable support."
+      },
+      {
+        "title": "Contact kept close",
+        "body": "Phone, email and location appear in the header and again at the end of the page, shortening the route from interest to enquiry."
+      }
+    ],
+    "notes": [
+      "The navigation is deliberately small: home, about, products and contact.",
+      "The site states its operating region rather than using a generic national claim."
+    ]
+  },
+  {
+    "slug": "echo",
+    "name": "echo",
+    "domain": "echo.grekam.in",
+    "url": "https://echo.grekam.in/",
+    "category": "Software",
+    "featured": false,
+    "image": "/portfolio/echo.webp",
+    "imageAlt": "echo academy operating system product homepage",
+    "summary": "An academy operating system site covering leads, teaching, payments and communication in one platform.",
+    "industry": "EdTech software",
+    "services": [
+      "Product design",
+      "Website design",
+      "Development"
+    ],
+    "overview": "echo positions itself as an operating system for academies rather than a single learning tool. The homepage follows the student lifecycle from lead ingestion through admissions, classes and invoicing, then shows the modules and integrations that support each step.",
+    "sections": [
+      "From Lead to Learner, Fully Automated",
+      "Every Module You Need to Run Your Academy",
+      "Connect Every Tool Your Academy Relies On",
+      "Built by Grekam",
+      "Frequently Asked Questions"
+    ],
+    "approach": [
+      {
+        "title": "A lifecycle narrative",
+        "body": "The page walks through admissions, teaching and administration in sequence, which makes a broad platform easier to understand."
+      },
+      {
+        "title": "Platform breadth, clearly grouped",
+        "body": "Modules, integrations and pricing each get their own section, preventing a long feature list from becoming a wall of text."
+      },
+      {
+        "title": "Evaluation before commitment",
+        "body": "Live demo and pricing routes are present from the first screen, alongside a sign-in link for existing academies."
+      }
+    ],
+    "notes": [
+      "The captured thumbnail shows the opening screen of the site.",
+      "The page names the types of learning businesses it is built for."
+    ]
+  },
+  {
+    "slug": "fc",
+    "name": "Fabricare",
+    "domain": "fc.grekam.in/landing",
+    "url": "https://fc.grekam.in/landing",
+    "category": "Services",
+    "featured": false,
+    "image": "/portfolio/fc.webp",
+    "imageAlt": "Fabricare laundry and dry cleaning service landing page",
+    "summary": "A multi-location laundry service site built around finding a pickup point and placing an order.",
+    "industry": "Laundry & dry cleaning",
+    "services": [
+      "Landing page design",
+      "Development"
+    ],
+    "overview": "Fabricare presents professional laundry and dry cleaning with a calm, service-led tone. The landing page explains the care offered, lists multiple Coimbatore pickup points with hours and contact details, and links to order tracking and business proposals.",
+    "sections": [
+      "We're closer than you think",
+      "Good clothes deserve good care",
+      "Care for every kind of clothing",
+      "Three simple steps",
+      "Clean clothes. Clear service.",
+      "Institutional garment care"
+    ],
+    "approach": [
+      {
+        "title": "Location is the first action",
+        "body": "The primary call to action is finding a nearby store, matching the practical reason most visitors arrive at a laundry site."
+      },
+      {
+        "title": "Care made specific",
+        "body": "Service blocks distinguish everyday washing, special garments and institutional linen rather than offering one generic promise."
+      },
+      {
+        "title": "Two audiences, one page",
+        "body": "Consumer ordering and commercial enquiries are separated into distinct routes while sharing the same visual voice."
+      }
+    ],
+    "notes": [
+      "Pickup points are listed with codes, addresses, hours and phone numbers.",
+      "The page links to both order tracking and a business proposal form."
+    ]
+  },
+  {
+    "slug": "buzz",
+    "name": "Buzz CRM",
+    "domain": "buzz.grekam.in/landing",
+    "url": "https://buzz.grekam.in/",
+    "category": "Software",
+    "featured": false,
+    "image": "/portfolio/buzz.webp",
+    "imageAlt": "Buzz CRM all-in-one business management software landing page",
+    "summary": "A self-hosted business management platform presented through roles, demos and deployment details.",
+    "industry": "B2B software",
+    "services": [
+      "Product marketing site",
+      "Design",
+      "Development"
+    ],
+    "overview": "Buzz packages CRM, WhatsApp engagement, AI voice calls, geofenced attendance and e-signed proposals into a self-hosted product. Its landing page offers role-based demo sandboxes, then explains the commercial editions and the deployment story.",
+    "sections": [
+      "Engineered for High-Velocity Teams",
+      "Six Pillars of Operational Excellence",
+      "Single-Company CRM or Multi-Tenant SaaS",
+      "Stop Paying Monthly SaaS Rents",
+      "What Founders Are Saying",
+      "Commercial Marketplace Pricing"
+    ],
+    "approach": [
+      {
+        "title": "Try before reading",
+        "body": "Owner, manager, staff and client demo perspectives let a visitor see the interface from the role they recognise."
+      },
+      {
+        "title": "Technical specifics as proof",
+        "body": "Deployment method, data ownership and stack details sit in the main story, because the audience is evaluating software they will run themselves."
+      },
+      {
+        "title": "Clear commercial routes",
+        "body": "Pricing and installer links are separated from the demo so curious evaluators and ready buyers each have a path."
+      }
+    ],
+    "notes": [
+      "The captured thumbnail shows the landing page rather than the logged-in product.",
+      "The page labels itself as a commercial release with a setup wizard."
+    ]
+  },
+  {
+    "slug": "grekam",
+    "name": "Grekam",
+    "domain": "grekam.in",
+    "url": "https://grekam.in/",
+    "category": "Studio",
+    "featured": true,
+    "image": "/portfolio/grekam.webp",
+    "imageAlt": "Grekam homepage with its software platforms and services",
+    "summary": "The parent studio site, linking a creative practice to its portfolio of software products.",
+    "industry": "Digital studio",
+    "services": [
+      "Brand site",
+      "Design",
+      "Development"
+    ],
+    "overview": "Grekam is the hub that connects the wider product ecosystem. The homepage leads with a direct point of view about bespoke digital work, then routes visitors into flagship platforms, core services, a cost calculator and a strategy-call booking.",
+    "sections": [
+      "Flagship Software Platforms",
+      "Our 4 Core Services",
+      "Live Interactive Showcase",
+      "Website Cost Calculator",
+      "Initiate Your Next Build"
+    ],
+    "approach": [
+      {
+        "title": "A clear position",
+        "body": "The opening question sets a deliberate tone before any service list, making the site's point of view legible in one line."
+      },
+      {
+        "title": "Products alongside services",
+        "body": "Software platforms are given equal weight to services, showing the range of work behind the studio."
+      },
+      {
+        "title": "Useful next steps",
+        "body": "A cost calculator and strategy-call link give visitors something concrete to do after understanding the offer."
+      }
+    ],
+    "notes": [
+      "The captured thumbnail shows the entry screen with its theme control.",
+      "Contact details, company links and policy routes are consolidated in the footer."
+    ]
+  }
+]
