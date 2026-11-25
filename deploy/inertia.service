@@ -8,9 +8,9 @@ User=inertia
 Group=inertia
 WorkingDirectory=/var/www/inertia
 Environment=NODE_ENV=production
-Environment=PORT=3060
+Environment=PORT=3070
 EnvironmentFile=/var/www/inertia/.env.production.local
-ExecStart=/usr/bin/npm start -- -p 3060
+ExecStart=/usr/bin/npm start -- -p 3070
 Restart=always
 RestartSec=5
 KillSignal=SIGTERM

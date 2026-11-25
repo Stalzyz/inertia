@@ -100,7 +100,7 @@ The site is a Next.js server app, not a static export: it needs Node.js, persist
    sudo bash deploy/setup-vps.sh
    ```
 
-   This installs Node 22 if needed, creates an `inertia` user, clones the `inertia-studio` branch into `/var/www/inertia`, writes an environment template, and installs the systemd service. The app listens on port `3060` so it does not conflict with the existing service on port `3000`.
+   This installs Node 22 if needed, creates an `inertia` user, clones the `inertia-studio` branch into `/var/www/inertia`, writes an environment template, and installs the systemd service. The app listens on port `3070` so it does not conflict with the other services already running on the VPS.
 
 3. Edit `/var/www/inertia/.env.production.local` and set a long, unique `ADMIN_PASSWORD`. The webhook URL is already included.
 
