@@ -33,8 +33,8 @@ if [[ -d "${APP_DIR}/data" ]]; then
 fi
 
 echo "Updating ${BRANCH}..."
-sudo -u "${APP_USER}" git fetch origin "${BRANCH}"
-sudo -u "${APP_USER}" git reset --hard "origin/${BRANCH}"
+sudo -H -u "${APP_USER}" git fetch origin "${BRANCH}"
+sudo -H -u "${APP_USER}" git reset --hard "origin/${BRANCH}"
 
 mkdir -p "${APP_DIR}/data/uploads"
 if find "${DATA_BACKUP}" -mindepth 1 | grep -q .; then
@@ -43,11 +43,11 @@ fi
 chown -R "${APP_USER}:${APP_USER}" "${APP_DIR}/data"
 
 echo "Installing dependencies..."
-sudo -u "${APP_USER}" npm ci
+sudo -H -u "${APP_USER}" npm ci
 
 echo "Checking and building..."
-sudo -u "${APP_USER}" npm run lint
-sudo -u "${APP_USER}" npm run build
+sudo -H -u "${APP_USER}" npm run lint
+sudo -H -u "${APP_USER}" npm run build
 
 echo "Restarting service..."
 systemctl restart inertia
