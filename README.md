@@ -87,7 +87,48 @@ Deleting a project removes its record but does not delete its uploaded screensho
 5. **Proof:** add only verified numbers or client quotes in `/admin`. Published testimonials appear on the homepage; drafts stay hidden. Case studies avoid unverified result claims.
 6. **Quick call CTA:** set `site.calendly` to reveal the “Book a 15-min call” button.
 
-`.env.local` currently points `NEXT_PUBLIC_SITE_URL` at localhost and sets a demo `ADMIN_PASSWORD` for local QA. It is gitignored and should not be deployed.
+`.env.local` currently uses the production landing URL for metadata and sets a demo `ADMIN_PASSWORD` for local QA. It is gitignored and should not be deployed.
+
+## VPS deployment (Ubuntu)
+
+The site is a Next.js server app, not a static export: it needs Node.js, persistent storage for `data/`, and a reverse proxy for HTTPS.
+
+1. Point the `web.inertiacreation.in` DNS record at the VPS IP.
+2. On the VPS, as root:
+
+   ```bash
+   sudo bash deploy/setup-vps.sh
+   ```
+
+   This installs Node 22 if needed, creates an `inertia` user, clones the `inertia-studio` branch into `/var/www/inertia`, writes an environment template, and installs the systemd service.
+
+3. Edit `/var/www/inertia/.env.production.local` and set a long, unique `ADMIN_PASSWORD`. The webhook URL is already included.
+
+4. Build and start the app:
+
+   ```bash
+   sudo bash /var/www/inertia/deploy/deploy.sh
+   ```
+
+5. Configure Nginx using `deploy/nginx.conf.example`, then install TLS:
+
+   ```bash
+   sudo cp /var/www/inertia/deploy/nginx.conf.example /etc/nginx/sites-available/inertia
+   sudo ln -s /etc/nginx/sites-available/inertia /etc/nginx/sites-enabled/inertia
+   sudo nginx -t && sudo systemctl reload nginx
+   sudo apt install -y certbot python3-certbot-nginx
+   sudo certbot --nginx -d web.inertiacreation.in
+   ```
+
+6. Back up `/var/www/inertia/data/` regularly — admin edits and uploaded images live there.
+
+Future updates are just:
+
+```bash
+sudo bash /var/www/inertia/deploy/deploy.sh
+```
+
+The `main` branch contains the separate M-Tel project; this site is deployed from `inertia-studio`.
 
 ## Design / motion notes
 
