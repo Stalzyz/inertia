@@ -33,12 +33,19 @@ if ! id -u "${APP_USER}" >/dev/null 2>&1; then
   useradd --system --create-home --shell /bin/bash "${APP_USER}"
 fi
 
-mkdir -p "${APP_DIR}" "${APP_DIR}/data/uploads"
+mkdir -p "${APP_DIR}"
 
 if [[ ! -d "${APP_DIR}/.git" ]]; then
+  if find "${APP_DIR}" -mindepth 1 -maxdepth 1 | grep -q .; then
+    echo "${APP_DIR} exists and is not empty but is not a git repository." >&2
+    echo "Move or remove it before running setup again." >&2
+    exit 1
+  fi
   echo "Cloning ${BRANCH} from ${REPO_URL}..."
   git clone --branch "${BRANCH}" "${REPO_URL}" "${APP_DIR}"
 fi
+
+mkdir -p "${APP_DIR}/data/uploads"
 
 ENV_FILE="${APP_DIR}/.env.production.local"
 if [[ ! -f "${ENV_FILE}" ]]; then
