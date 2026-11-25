@@ -100,7 +100,7 @@ The site is a Next.js server app, not a static export: it needs Node.js, persist
    sudo bash deploy/setup-vps.sh
    ```
 
-   This installs Node 22 if needed, creates an `inertia` user, clones the `inertia-studio` branch into `/var/www/inertia`, writes an environment template, and installs the systemd service.
+   This installs Node 22 if needed, creates an `inertia` user, clones the `inertia-studio` branch into `/var/www/inertia`, writes an environment template, and installs the systemd service. The app listens on port `3060` so it does not conflict with the existing service on port `3000`.
 
 3. Edit `/var/www/inertia/.env.production.local` and set a long, unique `ADMIN_PASSWORD`. The webhook URL is already included.
 
@@ -113,8 +113,8 @@ The site is a Next.js server app, not a static export: it needs Node.js, persist
 5. Configure Nginx using `deploy/nginx.conf.example`, then install TLS:
 
    ```bash
-   sudo cp /var/www/inertia/deploy/nginx.conf.example /etc/nginx/sites-available/inertia
-   sudo ln -s /etc/nginx/sites-available/inertia /etc/nginx/sites-enabled/inertia
+   sudo cp /var/www/inertia/deploy/nginx.conf.example /etc/nginx/sites-available/web.inertiacreation.in
+   sudo ln -s /etc/nginx/sites-available/web.inertiacreation.in /etc/nginx/sites-enabled/web.inertiacreation.in
    sudo nginx -t && sudo systemctl reload nginx
    sudo apt install -y certbot python3-certbot-nginx
    sudo certbot --nginx -d web.inertiacreation.in
