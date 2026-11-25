@@ -4,6 +4,11 @@ import { fileURLToPath } from "node:url";
 const nextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
+  experimental: {
+    // Admin screenshots and client photos are uploaded through Server Actions.
+    // Leave headroom above the 8 MB per-file validation limit for multipart overhead.
+    serverActions: { bodySizeLimit: "9mb" },
+  },
   turbopack: {
     root: fileURLToPath(new URL(".", import.meta.url)),
     rules: {

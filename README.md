@@ -2,6 +2,8 @@
 
 An editorial website for an independent web design & development studio, with a live portfolio and case studies for 13 published sites. Built with Next.js 16 (App Router), React 19 and Tailwind CSS 4.
 
+**Landing page:** [https://web.inertiacreation.in](https://web.inertiacreation.in)
+
 ## Run locally
 
 ```bash
@@ -76,7 +78,7 @@ Deleting a project removes its record but does not delete its uploaded screensho
 
 1. **Admin password:** set a long, unique `ADMIN_PASSWORD` on the server (see `.env.example`). The local demo password must not be deployed.
 2. **Contact details:** verify `site.email`, `site.whatsapp`, `site.whatsappLabel` and `site.address` in `lib/content.js`. They are currently set to `inertiacreation@gmail.com`, `+91 866-748-6546` and the Ondipudur address supplied by the studio.
-3. **Domain:** set `NEXT_PUBLIC_SITE_URL` to your real domain in your deployment environment (see `.env.example`). This drives metadata, Open Graph, `robots.txt` and `sitemap.xml`.
+3. **Domain:** set `NEXT_PUBLIC_SITE_URL=https://web.inertiacreation.in` in your deployment environment (see `.env.example`). This drives metadata, Open Graph, `robots.txt` and `sitemap.xml`. Configure the `web` DNS subdomain/CNAME with your hosting provider to point at the deployed site.
 4. **Form delivery:** configure **one** of:
    - `CONTACT_WEBHOOK_URL` — already set to the studio's public CRM lead endpoint. Enquiries are mapped to its fields (`name`, `email`, `phone`, `company`, `projectType`, `estimatedBudget`, `notes`), with extra details appended to `notes`; or
    - `RESEND_API_KEY` + `CONTACT_TO_EMAIL` (use `inertiacreation@gmail.com`; optional `CONTACT_FROM_EMAIL`).
