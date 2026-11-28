@@ -110,15 +110,22 @@ The site is a Next.js server app, not a static export: it needs Node.js, persist
    sudo bash /var/www/inertia/deploy/deploy.sh
    ```
 
-5. Configure Nginx using `deploy/nginx.conf.example`, then install TLS:
+5. Configure Nginx, issue the certificate, then switch to the HTTPS config:
 
    ```bash
    sudo cp /var/www/inertia/deploy/nginx.conf.example /etc/nginx/sites-available/web.inertiacreation.in
    sudo ln -s /etc/nginx/sites-available/web.inertiacreation.in /etc/nginx/sites-enabled/web.inertiacreation.in
    sudo nginx -t && sudo systemctl reload nginx
-   sudo apt install -y certbot python3-certbot-nginx
-   sudo certbot --nginx -d web.inertiacreation.in
+
+   sudo apt install -y certbot
+   sudo certbot certonly --webroot -w /var/www/html -d web.inertiacreation.in \
+     --non-interactive --agree-tos -m inertiacreation@gmail.com
+
+   sudo cp /var/www/inertia/deploy/nginx-https.conf.example /etc/nginx/sites-available/web.inertiacreation.in
+   sudo nginx -t && sudo systemctl reload nginx
    ```
+
+   The initial config exposes `/.well-known/acme-challenge/` for Certbot. The HTTPS config redirects port 80 and proxies port 443 to the app on port `3070`. Use `certbot renew` (already scheduled) for automatic renewal; no config change is needed.
 
 6. Back up `/var/www/inertia/data/` regularly — admin edits and uploaded images live there.
 

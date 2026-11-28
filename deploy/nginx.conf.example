@@ -1,11 +1,15 @@
-# Copy to /etc/nginx/sites-available/inertia and enable it.
-# After SSL is installed with Certbot, nginx will add the TLS server block.
+# Initial HTTP config for certificate issuance.
+# After Certbot succeeds, replace this with nginx-https.conf.example.
 server {
     listen 80;
     server_name web.inertiacreation.in;
 
-    # Leave headroom for admin screenshot/client photo uploads.
     client_max_body_size 10m;
+
+    # Required for Certbot webroot renewal.
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
 
     location / {
         proxy_pass http://127.0.0.1:3070;
